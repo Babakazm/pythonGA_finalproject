@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Final assessment</title>
+</head>
+{%extends 'base.html'%}
+{%block content%}
+    <h1>{% block title %} Your Shopping Assistant Site {% endblock %}</h1>
+    <BODY>
+               
+        <form action="/shopping1"  method="post" id="submit_shopping_form">
+           
+                <style>
+                    p {text-align: center;}
+                    div {text-align: center;}
+                    button{text-align: center;}
+                    </style>
+                <p><br><br>
+                    <label for=registerer>Registerer name:</label>
+                    <select name='registerer' id='registerer'>
+                        <option value="Babak">Babak</option>
+                        <option value="John">John</option>
+                        <option value="Jess">Jess</option>
+                        <option value="David">David</option>
+                        <option value="Ronaldo">Ronaldo</option>
+                    </select>
+                    <br>
+                </p>
+          
+                <p>
+                    <label for=itemNumber>Item number: </label>
+                    <input type="text" id="itemNumber_id" name="itemNumber" placeholder="Barcode">
+                </p>
+        
+                <p>
+                    <label for=item>Item description: </label>
+                    <input type=text name='item' id='item_id' placeholder="Item">
+                </p>
+          
+                <p>
+                    <label for=quantity>Quantity needed: </label>
+                    <input type=text name='quantity' id='quantity_id' placeholder="Quantity">
+                </p>
+           
+                <p>
+                    <label for=punit>Price per unit: $</label>
+                    <input type=text name='punit' id='punit_id' placeholder="Single unit price">
+                </p>
+           
+                <p>
+                    <label for=ptotal>Total price: $</label>
+                    <input type=text name='ptotal' id='ptotal_id' placeholder="Overal price:  $AUD">
+                </p>
+           
+                
+        </form>
+            
+        <button type="submit" form="submit_shopping_form">Submit review</button>
+ 
+    
+          {%endblock%}
+        </BODY>
+        </html>
+

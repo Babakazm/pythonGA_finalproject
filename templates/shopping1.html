@@ -1,0 +1,66 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h2>{%block title%}Conversion{%endblock%}</h2>
+    
+<table class="table">
+    <thead>
+      <tr>
+       
+        <th scope="col">Shopping list</th>
+  
+      </tr>
+    </thead>  
+    <tr>
+        <th scope="row">registerer name: </th>
+        <td><div class="form-group">
+            <h2>{{register}}</h2>
+        </div></td>    
+    
+  
+  
+      </tr>
+    </thead>  
+    <tr>
+        <th scope="row">Item number: </th>
+        <td><div class="form-group">
+            <h2>{{serial}}</h2>
+        </div></td>    
+    </tr>
+    <tr>
+        <th scope="row">Item description: </th>
+        <td><div class="form-group">
+            <h2>{{stuff}}</h2>
+        </div></td>    
+    </tr>
+    <tr>
+        <th scope="row">Quantity: </th>
+        <td><div class="form-group">
+            <h2>{{number}}</h2>
+        </div></td>    
+    </tr>
+    <tr>
+        <th scope="row">Price per unit: </th>
+        <td><div class="form-group">
+            <h2>{{unit}}</h2>
+        </div></td>    
+    </tr>
+    <tr>
+        <th scope="row">totall price: </th>
+        <td><div class="form-group">
+            <h2>{{total}}</h2>
+        </div></td>    
+    </tr>
+    <br><br>
+    <h2>Thanks for your shopping</h2>
+    
+
+
+        
+   
+{% endblock %}
+</body>
+</html>

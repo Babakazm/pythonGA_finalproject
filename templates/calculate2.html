@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Mass convertor</title>
+</head>
+{% extends 'base.html' %}
+{% block content %}
+
+
+        <h2>{%block title%}Conversion{%endblock%}</h2>
+       
+        <table class="table">
+            <thead>
+              <tr>
+    
+                <th scope="col">Selected Unit: </th>
+                <th scope="col">Inserted value: </th>
+                <th scope="col">result: </th>
+              </tr>
+            </thead>  
+       
+                <td><div class="form-group">
+                  <label for="height"><h3>{{ unit }}</h3></label>
+              </div></td>
+                <td><div class="form-group">
+                  <label for="height"><h3>{{ value }}</h3></label>
+              </div></td>   
+   
+                <td><div class="form-group">
+                    <label for="height"><h3>{{ mass }}</h3></label>
+                </div></td>
+{% endblock %}
+</body>
+</html>

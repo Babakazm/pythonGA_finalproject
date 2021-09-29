@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Final assessment</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    <h2>Unit convertor app</h2>
+ 
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">App</th>
+            <th scope="col">input1</th>
+            <th scope="col">input2</th>
+            <th scope="col">click</th>
+          </tr>
+        </thead>
+        <form action="/calculate"  method="post" id="submit_review_form">
+    <tr>
+        <th scope="row">1</th>
+        <td><div class="form-group">
+            <label for="weight">Weight(kg):</label>
+            <input type="number" id="weight_id" name="weight" placeholder="Insert your weight: "
+                   value="{{ request.form['weight'] }}"></input>
+        </div></td>    
+    
+    
+
+
+        <td><div class="form-group">
+            <label for="height">height(cm):</label>
+            <input type="height" id="height_id" name="height" placeholder="Insert your height: "
+                   value="{{ request.form['height'] }}"></input>
+        </div></td>
+
+    
+  
+    <td><div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div></td></tr>
+</form>
+<form action="/calculate/2"  method="post" id="submit_review_form1">
+    <tr><th scope="row">2</th>
+    <td>
+    <label for=unit>Unit to convert:</label>
+    <select name='unit' id='unit'>
+        <option value="kg">Killograms</option>
+        <option value="lb">Pound</option>
+        
+    </select>
+    </td>
+    <td>
+        <label for=value>Item number: </label>
+        <input type="number" id="value_id" name="value" placeholder="Insert unit: ">
+    </td>
+    <td>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div></td></tr>
+
+</form>
+<form action="/calculate/3"  method="post" id="submit_review_form2">
+   <tr>
+    <th scope="row">3</th>
+    <td>
+        <label for=t>Tempurature convertor: </label>
+        <select name='t' id='t'>
+            <option value="c">Celisius</option>
+            <option value="f">Fahrenheit</option>
+            
+        </select>
+    </td>
+    <td>
+  
+        <label for=celisius>Conversion unit: </label>
+        <input type="number" id="celisius_id" name="celisius" placeholder="Insert unit: ">
+    </td>
+    <td>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div></td></tr>
+    </form>
+{% endblock %}
+</BODY>
+</html>

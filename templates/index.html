@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Final assessment</title>
+    <style>
+        .grid-container {
+          display: grid;
+          grid-column-gap: 10px;
+          grid-template-columns: auto auto auto;
+          background-color: #7c8288;
+          padding: 10px;
+        }
+        
+        .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+        </style>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %} Final Presentation {% endblock %}</h1>
+    <h2>Lots to do but still something</h2>
+    <div class="card">
+        <center><div id='application'><h2>Application</h2></a></div></center>
+  <div class="card-body">
+    <h5 class="card-title">What to expect:</h5>
+    <p class="card-text">Tried to use simple mathematical functions to do simple conversions. There are tons of more applications to be added.</p>
+   <center> <a href="{{ url_for('application')}}">Application page</a></center>
+  </div>
+</div>
+<div class="card">
+    <center><div id='blog'><h2>Blog</h2></a></div></center>
+<div class="card-body">
+<h5 class="card-title">Every one needs a blog page right:))</h5>
+<p class="card-text">A simple but yet usefull blog application could help us to be best of overselves. Add several functionality to that, that could be legen.. wait for it legen wait for it legendary.</p>
+<center> <a href="{{ url_for('blog')}}">Blog page</a></center>
+</div>
+</div>
+<div class="card">
+    <center><div id='shop'><h2>Shop</h2></a></div></center>
+<div class="card-body">
+<h5 class="card-title">Your shopping assistant:</h5>
+<p class="card-text">Its a simple application but it just has borned and if you give it enough time it could be the future of product management.</p>
+<center> <a href="{{ url_for('shop')}}">Shop page</a></center>
+</div>
+</div>
+<div class="card">
+    <center><div id='application'><h2>Web</h2></a></div></center>
+<div class="card-body">
+<h5 class="card-title">Webscraping:</h5>
+<p class="card-text">Have you ever wondered what to watch during this weekend. Stop worrying about, we will search the internet for you and reccomend top 10 movies for you and make your weekend awsome.</p>
+<center> <a href="{{ url_for('scraping')}}">Application page</a></center>
+</div>
+</div>
+
+ 
+  
+        <center><div class="grid-item">Thanks for your attention and wish you all the best</div></center>
+        
+    
+  
+{% endblock %}
+</BODY>
+</html>
